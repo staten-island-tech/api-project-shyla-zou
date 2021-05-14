@@ -2,7 +2,7 @@ const DOMSelectors = {
   champInput: document.getElementById("championSearch"),
   summInput: document.getElementById("summonerSearch"),
   submit: document.getElementById("submitBtn"),
-  info: document.getElementById("row"),
+  content: document.getElementById("content"),
 };
 
 export { DOMSelectors };

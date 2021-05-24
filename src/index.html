@@ -2,32 +2,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOL</title>
+    <title>UV</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="scss/main.scss" />
+    <link rel="stylesheet" href="./scss/style.scss" />
   </head>
   <body>
     <section class="secA">
-      <h1 class="header">League of Legends Database</h1>
-      <h2 class="sub-header">Search for a Champion or a Summoner ID</h2>
+      <h1 class="header">UV Index by Location</h1>
+      <h2 class="sub-header">Enter a Latitude and a Longitude value</h2>
 
-      <input
-        type="text"
-        placeholder="Search for a Champion"
-        id="championSearch"
-      />
-      <input
-        type="text"
-        placeholder="Search for a Summoner ID"
-        id="summonerSearch"
-      />
-
-      <button id="submitBtn">Submit</button>
+      <section class="inputvalues">
+        <input type="text" placeholder="latitude value" id="latSearch" />
+        <input type="text" placeholder="longitude value" id="lngSearch" />
+        <button id="submitBtn">Submit</button>
+      </section>
     </section>
 
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -1,8 +1,11 @@
 const DOMSelectors = {
-  champInput: document.getElementById("championSearch"),
-  summInput: document.getElementById("summonerSearch"),
-  submit: document.getElementById("submitBtn"),
-  content: document.getElementById("content"),
+  lat: document.getElementById("findLatitude"),
+  lng: document.getElementById("findLongitude"),
+  alt: document.getElementById("findAltitude"),
+  ozone: document.getElementById("findOzone"),
+  dt: document.getElementById("findDatetime"),
+  submitBtn: document.getElementById("submitBtn"),
+  contentArea: document.getElementById("content"),
 };
 
 export { DOMSelectors };

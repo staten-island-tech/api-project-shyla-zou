@@ -1,5 +1,8 @@
 const DOMSelectors = {
-  grid: document.querySelector(".movie-grid"),
+  latitude: document.getElementById("findLatitude"),
+  longitude: document.getElementById("findLongitude"),
+  submitBtn: document.getElementById("submitBtn"),
+  contentArea: document.getElementById("content"),
 };
 
 export { DOMSelectors };

@@ -24,9 +24,6 @@ const grabData = async function () {
 function getUVIndex() {
   const lat = $("#lat").val();
   const lng = $("#lng").val();
-  const alt = $("#alt").val();
-  const ozone = $("#ozone").val();
-  const dt = $("#dt").val();
 
   $.ajax({
     type: "GET",
@@ -37,17 +34,7 @@ function getUVIndex() {
         "baf0db2c787499d5700a4b6856e09fe9"
       );
     },
-    url:
-      "https://api.openuv.io/api/v1/uv?lat=" +
-      lat +
-      "&lng=" +
-      lng +
-      "&alt=" +
-      alt +
-      "&ozone=" +
-      ozone +
-      "&dt=" +
-      dt,
+    url: "https://api.openuv.io/api/v1/uv?lat=" + lat + "&lng=" + lng + "&alt=",
     success: function (response) {},
     error: function (response) {},
   });
@@ -77,5 +64,7 @@ DOMSelectors.submitBtn.addEventListener("click", function () {
   longitudeValue = DOMSelectors.longitudeInput.value;
   displayData();
 });
+
+console.log(getUVIndex);
 
 init();

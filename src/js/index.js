@@ -1,20 +1,16 @@
 import { DOMSelectors } from "./DOM";
 
-const init = function () {
-  let latitudeValue;
-  let longitudeValue;
-  const apikey = "baf0db2c787499d5700a4b6856e09fe9";
-};
+const key = "baf0db2c787499d5700a4b6856e09fe9";
 
-const grabData = async function () {
+const query = async function () {
   try {
-    const response = await fetch(`https://api.openuv.io/api/v1/uv`);
+    const response = await fetch(query);
     const data = await response.json();
     console.log(data);
     return data;
   } catch (error) {
     console.log(error);
-    alert("Value entered is not valid");
+    alert("Something went wrong");
   }
 
   function getUVIndex() {
@@ -69,11 +65,10 @@ const grabData = async function () {
   latitudeValue = DOMSelectors.latitude.value;
   event.preventDefault;
   console.log(latitudeValue);
-  const infoPromise = getData();
+  const infoPromise = query();
   const info = await infoPromise;
   displayData(info);
 
-  const response = await grabData(query);
   const dataResults = response.data;
   const alt = dataResults.alt.value;
   const ozone = dataResults.ozone.value;
@@ -108,11 +103,13 @@ const grabData = async function () {
     description = "YALL LIVE LIKE THIS??? RUN";
   }
 
+  console.log(Color, width);
+
   displayData();
 
-  DOMSelectors.contentArea.insertAdjacentHTML("afterbegin"`<div class="info">
+  DOMSelectors.infoBox.insertAdjacentHTML("beforeend"`<div class="info">
   <h3> ${longitude}, ${latitude} </h3>
-  <p><span>UVIndex: </span> ${UV} °F</p>
+  <p><span>UVIndex: </span> ${UV} </p>
   <p><span>Description: </span>${description}</p>
   <p><span>${response(displayData)}</span></p>
 </div>`);
@@ -124,4 +121,4 @@ const grabData = async function () {
   });
 };
 
-init();
+query();

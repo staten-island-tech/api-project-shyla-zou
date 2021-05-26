@@ -117,7 +117,9 @@ const query = async function () {
 </div>`
   );
 
-  DOMSelectors.submitBtn.addEventListener("click", function () {
+  DOMSelectors.infoBox.innerHTML = "";
+
+  DOMSelectors.submitBtn.addEventListener("submit", function () {
     latitudeValue = DOMSelectors.latitude.value;
     longitudeValue = DOMSelectors.longitude.value;
     displayData();

@@ -8,7 +8,7 @@ const init = function () {
 
 const grabData = async function () {
   try {
-    const response = await fetch(query);
+    const response = await fetch(`https://api.openuv.io/api/v1/uv`);
     const data = await response.json();
     console.log(data);
     return data;

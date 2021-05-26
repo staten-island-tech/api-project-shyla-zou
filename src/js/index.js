@@ -107,12 +107,15 @@ const query = async function () {
 
   displayData();
 
-  DOMSelectors.infoBox.insertAdjacentHTML("beforeend"`<div class="info">
+  DOMSelectors.infoBox.insertAdjacentHTML(
+    "beforeend",
+    `<div class="info">
   <h3> ${longitude}, ${latitude} </h3>
   <p><span>UVIndex: </span> ${UV} </p>
   <p><span>Description: </span>${description}</p>
   <p><span>${response(displayData)}</span></p>
-</div>`);
+</div>`
+  );
 
   DOMSelectors.submitBtn.addEventListener("click", function () {
     latitudeValue = DOMSelectors.latitude.value;
